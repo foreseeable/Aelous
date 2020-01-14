@@ -7,7 +7,7 @@ def is_nan(x):
     return x is np.nan or x != x
 
 
-data = pd.read_csv('./dataset.csv')
+data = pd.read_csv('./data/dataset.csv')
 data.sum()
 category = data['categories']
 
@@ -54,7 +54,7 @@ def label_engineering():
     result = pd.concat([data, proba], axis=1, sort=False)
     result.sum()
     # print(result)
-    result.to_csv('./dataset_v1.csv', index=False)
+    result.to_csv('./data/dataset_v1.csv', index=False)
 
 
 label_engineering()

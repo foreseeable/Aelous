@@ -4,7 +4,7 @@ import tensorflow as tf
 
 
 def main():
-    data = pd.read_csv('./dataset_v1.csv')
+    data = pd.read_csv('./data/dataset_v1.csv')
     X_train = data['url']
     y_train = data['NewCategory']
 

@@ -19,7 +19,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 
-data = pd.read_csv('./dataset_v1.csv')
+data = pd.read_csv('./data/dataset_v1.csv')
 X_train = data['url']
 y_train = data['NewCategory']
 vectorizer = CountVectorizer()
@@ -36,7 +36,7 @@ def NaiveBayes():
     prediction = pd.DataFrame(y_pred, index=np.arange(len(data)), columns=['prediction'])
     result = pd.concat([X_train, prediction], axis=1, sort=False)
     result.sum()
-    result.to_csv('./pred1.csv', index=False)
+    result.to_csv('./pred/pred1.csv', index=False)
     precision_recall_fscore_support(y_train, y_pred, average='weighted')
     from sklearn.metrics import classification_report
     print(classification_report(y_train, y_pred))
@@ -51,7 +51,7 @@ def NaiveKmeans():
     print(prediction)
     prediction.describe()
     result = pd.concat([X_train, prediction], axis=1, sort=False)
-    result.to_csv('./pred2.csv', index=False)
+    result.to_csv('./pred/pred2.csv', index=False)
 
 
 # NaiveBayes()
