@@ -19,7 +19,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 
-data = pd.read_csv('./dataset_labeled.csv')
+data = pd.read_csv('./dataset_v1.csv')
 X_train = data['url']
 y_train = data['NewCategory']
 vectorizer = CountVectorizer()
