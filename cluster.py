@@ -13,6 +13,7 @@ import ipaddress as ip
 from urllib.parse import urlparse
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -38,8 +39,11 @@ def NaiveBayes():
     result.sum()
     result.to_csv('./pred/pred1.csv', index=False)
     precision_recall_fscore_support(y_train, y_pred, average='weighted')
-    from sklearn.metrics import classification_report
+    print("")
+    print("Classification Report: ")
     print(classification_report(y_train, y_pred))
+    print("")
+    print("Accuracy Score: ", accuracy_score(y_train, y_pred))
 
 
 def NaiveKmeans():

@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score
 import pandas as pd
+import os
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -35,12 +36,16 @@ if __name__ == '__main__':
     vectorizer = CountVectorizer()
 
     X_train = vectorizer.fit_transform(X_train)
-    autoencoder = GetModel(input_shape=X_train.shape[1])
 
-    # Use unlabeled data to train the Encoder
-    autoencoder.fit(X_train, X_train,
-                    batch_size=256, epochs=15, verbose=1,
-                    shuffle=True, validation_split=0.20)
+    if 'autoencoder.h5' in os.listdir('./saved_model/'):
+        autoencoder = tf.keras.models.load_model('./saved_model/autoencoder.h5')
+    else:
+        autoencoder = GetModel(input_shape=X_train.shape[1])
+        # Use unlabeled data to train the Encoder
+        autoencoder.fit(X_train, X_train,
+                        batch_size=256, epochs=10, verbose=1,
+                        shuffle=True, validation_split=0.20)
+        autoencoder.save('./saved_model/autoencoder.h5')
 
     hidden_representation = Sequential()
     hidden_representation.add(autoencoder.layers[0])
@@ -48,8 +53,8 @@ if __name__ == '__main__':
     hidden_representation.add(autoencoder.layers[2])
 
     data_labeled = pd.read_csv('./data/dataset_labeled.csv')
-    X_labeled = data_labeled['url']
-    X_labeled = vectorizer.fit_transform(X_labeled)
+    X_labeled = X_train[0:799]
+    # X_labeled = vectorizer.fit_transform(X_labeled)
     y_rep = data_labeled['NewCategory']
     X_rep = hidden_representation.predict(X_labeled)
     train_x, val_x, train_y, val_y = train_test_split(X_rep, y_rep, test_size=0.25)
