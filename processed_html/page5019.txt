@@ -1,0 +1,1 @@
+DIS Data Dictionary: Domain field Current standard:  IEEE 1278.1 Other problems may be reported to the WebMaster, www@sc.ist.ucf.edu 

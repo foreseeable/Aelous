@@ -1,0 +1,1 @@
+Math Forum - Ask Dr. Math Search the Dr. Math Library: [ Choose "whole words" when searching for a wordlike  age. ] [ Privacy Policy ][ Terms of Use ] Ask Dr. Math TM  1994- document.write(new Date().getFullYear()) 2019 The Math Forum at NCTM. All rights reserved. http://mathforum.org/dr.math/ 

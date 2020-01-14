@@ -1,0 +1,1 @@
+Timer.Reset - Xojo Documentation Restarts the Timer, but does not change its settings. Setting  Timer.Mode  will also restart the  Timer , even if its value has not changed. This code is in the Action event of a button: 

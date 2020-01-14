@@ -1,0 +1,1 @@
+MatUseTrans (Maximo API)  See  Inventory Package description .   The key attribute(s) in this object are as follows: Matusetransid   The attributes in this object are as follows:  

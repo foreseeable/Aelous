@@ -1,0 +1,1 @@
+Raspbian and USB hub Westrom HV-H18 (214b:7000) only one port works - Raspberry Pi Forums Tue Nov 28, 2017 12:16 pm  Sun Dec 03, 2017 4:10 pm  Return to “Troubleshooting”                         Raspberry Pi Foundation                         UK Registered Charity 1129409                     Privacy Cookies Trademark rules and brand guidelines 

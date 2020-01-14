@@ -1,0 +1,1 @@
+VCV000236818.1 - ClinVar - NCBI                                                             Benign(1);Likely benign(1);Uncertain significance(1)                                                         Record last updated Aug 06, 2019 NLM | NIH | HHS | USA.gov 

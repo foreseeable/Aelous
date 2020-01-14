@@ -1,0 +1,1 @@
+Legacy of Kain: Defiance Screenshots, Pictures, Wallpapers - Xbox - IGN < %= searchResult.renderDomain + searchItem.url.replace('http:','https:') %>"> < %= searchItem.title %> < %= searchItem.description %> Last modified  < %= searchItem.displayDate %> < %= searchItem.description %> We encourage you to read our updated  PRIVACY POLICY  and  COOKIE POLICY . 

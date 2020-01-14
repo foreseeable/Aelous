@@ -1,0 +1,1 @@
+Convert NSString to EVP_PKEY and back · GitHub         Instantly share code, notes, and snippets.       Uses  fmemopen()  on BSD using:  MemoryMapping  and OpenSSL 

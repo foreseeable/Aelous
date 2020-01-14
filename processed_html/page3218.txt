@@ -1,0 +1,1 @@
+Retrieve an invoice specification - bol.com Developer Center Je bent hier: Home  »  Retrieve an invoice specification You can choose which format you with to receive the data in by setting the correct accept-header. The available formats are part of the result you get when using the Invoice List. And will be: 
