@@ -1,6 +1,6 @@
-from keras.layers import Input, Dense
-from keras.models import Model, Sequential
-from keras import regularizers
+from tensorflow.keras.layers import Input, Dense
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras import regularizers
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score
