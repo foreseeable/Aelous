@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Detail - SM.MS - Simple Free Image Hosting</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/assets/css/lib/fontawesome/css/all.min.css" media="all" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/notifyme.css?version=1579071861">
+    <link rel="stylesheet" href="/assets/css/indexstyle.css?version=1579071861">
+    
+    <style>
+        .image-container{
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .error-template { margin-top:15px;margin-bottom:15px; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.loli.net/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css" media="screen" />
+
+    <!-- Load google font-->
+    <link rel="stylesheet" href="//fonts.loli.net/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"  media="none" onload="if(media!='all')media='all'">
+
+    <script src="/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container nav-main">
+        <a class="navbar-brand" href="/">SM.MS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sm.ms/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sm.ms/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sm.ms/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sm.ms/pricing">Pricing</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sm.ms/changelog">Change Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://doc.sm.ms/">API Docs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="drop_user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="drop_user">
+                                                    <a class="dropdown-item" href="https://sm.ms/login">Login</a>
+                                                        <a class="dropdown-item" href="https://sm.ms/register">Register</a>
+                                                                        </div>
+                </li>
+            </ul>
+                        <div class="advert_nav">
+                <p><a target="_blank" href="https://sa.net">极云五折促销</a></p>
+            </div>
+                    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="container kv-main">
+    
+    <div class="container-full" style="padding-top: 20px">
+        <!--  -->
+        <div class="row">
+                        <div class="col-md-6">
+                                        <div class="image-container">
+                    <a href="https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png" class="fancybox" rel="gallery1">
+                        <img class="image" src="https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png" alt="test.png" title="test.png" style="max-width: 100%" />
+                    </a>
+                </div>
+                <div class="text-center image-size-container" style="margin: 10px 0px;">
+                    <span class="badge badge-dark" style="border-radius: 0;">File Name: <span class="image-size">test.png</span></span>
+                    <span class="badge badge-dark" style="border-radius: 0;">Image Size: <span class="image-size">2878x1512</span>px</span>
+                </div>
+                <div style="max-width: 500px;margin: auto;">
+                    <div class="form-group">
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">BBCode</div>
+                            </div>
+                            <input type='text' class="form-control" onclick="this.select();" value='[URL=https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png][IMG]https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png[/IMG][/URL]'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">HTML</div>
+                            </div>
+                            <input type='text' class="form-control" id='sharegigya'onclick="this.select();" value='&lt;a href=&quot;https://sm.ms/image/sCy7BKRjthZr13Y&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png&quot; alt=&quot;test.png&quot;&gt;&lt;/a&gt;'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Markdown</div>
+                            </div>
+                            <input type='text' class="form-control" onclick="this.select();" value='![test.png](https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png)'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Image URL</div>
+                            </div>
+                            <input type='text' class="form-control" onclick="this.select();" value='https://i.loli.net/2020/01/15/sCy7BKRjthZr13Y.png'/>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                        <div class="col-md-6" style="">
+                <div class="detail-advert">
+                    <div class="detail-head">
+                        <h1>Riven Cloud</h1>
+                        <a target="_blank" href="https://sa.net"><img src="/assets/images/riven_logo.svg" alt=""></a>
+                        <p>WE HOST YOUR DREAMS</p>
+                        <hr>
+                    </div>
+                    <div class="detail-code">
+                        <h1>极云五折优惠码</h1>
+                        <a target="_blank" href="https://sa.net"><span>SMMS</span></a>
+                    </div>
+                    <div class="detail-body">
+                        <h2>为什么选择和信赖极云网络？</h2>
+                        <p>我们帮您解决全球网络互联互通问题，就是这么简单。</p>
+                        <hr>
+                        <ul class="detail-body-text">
+                            <li>从网络到服务器，我们使用最新的硬件和技术来构建稳定的环境。</li>
+                            <li>我们使用全球顶级网络运营商，确保您的服务器在全球通畅。</li>
+                            <li>部署一台极云网络的 VPS 服务器上线从未如此简单快捷。</li>
+                            <li>24x7 技术支持，独立团队专人回答您的问题。</li>
+                        </ul>
+                        <hr>         
+                    </div>
+                    <div class="detail-foot">
+                        <p>打折优惠<span>:</span>五折优惠</p>
+                        <p>优惠时间<span>:</span>长期有效</p>
+                    </div>
+                    <div class="detail-foot-img">
+                        <img src="/assets/images/frame.png" alt=""><hr>
+                        <p>Riven Cloud - 极云网络</p>
+                    </div>
+                </div>
+            </div>
+                    </div>
+
+    </div>
+    </div>
+
+    <div class="ad-buttom-div" align="center">
+    </div>
+    <!-- /.content-wrapper -->
+
+
+    </div>
+<div id="accepr_box" class=' accepr_box '></div>
+<!-- /.content-wrapper -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+                        <div class="col-lg-6">
+                <p class="text-muted">
+                            请勿上传违反中国大陆和香港法律的图片，违者后果自负。<span>Copyright Ⓒ  xTom GmbH. All rights reserved.</span></p>
+            </div>
+                        <div class="col-lg-6 advert_foot">
+                <div class="advert_title">
+                    <h3>Riven Cloud</h3>
+                </div>
+                <div class="advert_text">
+                    <p>极云网络五折优惠码<span>SMMS</span></p>
+                    <a target="_blank" href="https://sa.net">点击传送</a>
+                </div>
+            </div>
+                    </div>
+    </div>
+</footer>
+
+<!-- js -->
+<script src="/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="/ajax/libs/layer/2.3/layer.js"></script>
+<script src="/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="/assets/js/notifyme.js?version=1579071861"></script>
+
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                padding: 15,
+                infobar : true,
+                toolbar : true,
+                buttons : [
+                    'slideShow',
+                    'fullScreen',
+                    'download',
+                    'zoom',
+                    'close'
+                ],
+            });
+        });
+    </script>
+
+</body>
+</html>
