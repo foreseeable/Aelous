@@ -1,0 +1,1 @@
+arch liux netctl failure for static ip

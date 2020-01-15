@@ -1,0 +1,1 @@
+timer.reset xojo documentation restarts the timer but does not change its settings setting timer.mode will also restart the timer even if its value has not changed this code is in the action event of a button

@@ -1,0 +1,1 @@
+using smtp.c program to send email with rcm5700 digi forum

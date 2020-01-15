@@ -1,0 +1,1 @@
+live aviation news and store function d s id var js fjs d.getelementsbytagname s 0 if d.getelementbyid id return js d.createelement s js.id id js.src 'https //connect.facebook.net/fr_fr/sdk.js xfbml=1 =v3.0 fjs.parentnode.insertbefore js fjs document 'script 'facebook-jssdk

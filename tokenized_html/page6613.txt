@@ -1,0 +1,1 @@
+vcv000236818.1 clinvar ncbi benign 1 likely benign 1 uncertain significance 1 record last updated aug 06 2019 nlm nih hhs usa.gov

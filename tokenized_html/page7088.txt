@@ -1,0 +1,1 @@
+matusetrans maximo api see inventory package description the key attribute s in this object are as follows matusetransid the attributes in this object are as follows

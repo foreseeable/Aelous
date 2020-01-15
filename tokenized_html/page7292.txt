@@ -1,0 +1,1 @@
+marvell sas target driver target driver for marvell sas adapters is developed by marvell and andy yan it is fully functionalsas target driver it is on the beta stage you can download it from the scst svn repository see the download page howto setup access to it scst svn repository copyright 2004 2019 vladislav bolkhovitin others design by daniel fernandes

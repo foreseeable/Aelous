@@ -1,0 +1,1 @@
+convert nsstring to evp_pkey and back github instantly share code notes and snippets uses fmemopen on bsd using memorymapping and openssl
