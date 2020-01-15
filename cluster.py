@@ -29,6 +29,9 @@ vectorizer = CountVectorizer()
 # X = vectorizer.fit_transform(X_train)
 
 def NaiveBayes():
+    data = pd.read_csv('./data/dataset_labeled.csv')
+    X_train = data['url']
+    y_train = data['NewCategory']
     text_clf = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('clf', MultinomialNB())])
     text_clf = text_clf.fit(X_train, y_train)
     # grid_mean_scores = [result.mean_validation_score for result in gs_clf.grid_scores_]
@@ -58,5 +61,5 @@ def NaiveKmeans():
     result.to_csv('./pred/pred2.csv', index=False)
 
 
-# NaiveBayes()
-NaiveKmeans()
+NaiveBayes()
+# NaiveKmeans()
