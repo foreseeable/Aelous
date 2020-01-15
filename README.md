@@ -1,35 +1,54 @@
-# Unsupervised Learning for Webpage Classification
+# Project of Team Aelous in Google ML Winter Camp 2020, Shanghai Site
+13 - 17 January, 2020
 
-## 已经尝试的Methods
-* 对已经labeled的data进行监督学习，但是这样的prediction几乎全是others，
-只有artical和encyclopedia准确率比较高，原因还是再有数据太少了。
-* 对所有的data进行聚类，但是如何把聚类出来的10个类和原本data中的类对应
-上也是个问题
-* 输入image，使用encoder-decoder模型现找出data representation，然后用
-监督学习找到hidden-representation到label的关系，前一步已经完成。
+Project Name: Webpage Wizard
 
-## 接下来的方向
-主要的问题还是数据太少，感觉只能做半监督学习
+Team Members: Muge Chen, Yujie Lu & Yanqiong Chen
+## 1. Project Introduction
+In the world of machine learning, people train models based on dataset that are
+fully labeled. However, most of the application domain suffers from not having sufficient labeled 
+data whereas unlabeled data is available cheaply. And our project also faced
+the same problem. Specifically, we try to do webpage classification on a dataset 
+that **only a small amount of data is labeled**. 
 
-* 先用标注好的数据来进行训练，然后利用训练好的学习器找出未标注数据中能
-对性能改善最大的数据来询问“专家”。这样只需要专家标注比较少的数据就能得
-到较强的学习器了。
-* 半监督聚类：在非监督学习的基础上引入监督信息来优化性能,约束 k 均值（Constrained k-means）算法
-* 输入html进行分类。
+Here is the basic information of our dataset
+- Dataset name: webpage-classification
+- Data size: 10K pairs of {web page screenshot image, web page html source}.
+- 800 samples are manually labeled {is_entity, category}
+- 2590 samples are manually labeled {is_entity}
 
-# Using Image and HTML for classification
-到时候做成应用的话肯定是优先使用html的，但是html的输入和feature extraction又是
-一个问题。
+Our model aims to solve such a challenging issue 
+by semi-supervised learning combined with some rule based methods. 
 
-# How to Achieve Innovations?
-感觉只做分类真的8太行，想想还有啥其他比较fancy的功能可以做吧？
-目前想到了几个可能的应用：
-* 做成浏览器插件，然后浏览器检测到不同类型的网页时会做不同的优化，就
-像switch Omega 一样。并且这个是已经有类似的应用的：wikiwand
-* 浏览器收集用户浏览的网页类型，精准推送相关的广告。比如如果artical和
-wiki比较多的话，说明用户比较喜欢学习...something like that
-* 判断是否是entity，从而进行一个搜索的排序
+## 2. Implementation Details
+First we did some pre-processing on the dataset. 
+* We crop and resize the render images to a fixed size 
+of `(224,224,3)`. 
+* We use a html parser to extract useful information from the 
+html data. And use word2vec to process the extracted information. 
+* We convert the given labels to probability of different 
+categories.  
+* We also write a script to label some of the unlabeled data that 
+we are 95% confident. For example, the one with url that 
+starts with `wikipedia` or contains `imdb/title`, etc.
 
-mark两个去年的链接
-* [Best Project](https://github.com/forwchen/celeste)
-* [Most Innovative](https://github.com/Google-winter-camp/ZJU)
+Second we build the following pipeline to classify the webpage, 
+(Visualization here)
+
+    model1(based on url) --> model2(based on html & img) --> category
+
+## 3. Demo and Posters
+There are many possible applications of webpage classification, for example 
+* We can build an extension for Chrome which can beautify the UI with 
+different strategies based on the category of the webpage. 
+Just like switch omega.
+* The browser can collect information about which category the user
+visited most frequently to decide which AD to present.
+
+And we have write a small demo extension as followed. 
+
+## References
+[1] S4L: Self-Supervised Semi-Supervised Learning (ICCV 2019)
+
+[2] Mean teachers are better role models: Weight-averaged consistency 
+targets improve semi-supervised deep learning results (NIPS 2017)
