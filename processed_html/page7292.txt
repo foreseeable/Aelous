@@ -1,0 +1,1 @@
+Marvell SAS Target Driver Target driver for Marvell SAS adapters is developed by Marvell and Andy Yan. It is fully functionalSAS target driver. It is on the beta stage. You can download it from the SCST SVN repository. See the download page howto setup access to it.  SCST SVN Repository  Copyright 2004 - 2019 Vladislav Bolkhovitin  &  others Design by:  Daniel Fernandes 

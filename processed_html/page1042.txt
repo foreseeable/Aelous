@@ -1,0 +1,1 @@
+Generate graph on based of ExaWatcher logs. - Exadata Copyright   2018 www.databaseadm.com 

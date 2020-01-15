@@ -1,0 +1,1 @@
+ISOLATORS IN SOLUBLE GROUPS OF FINITE RANK For subgroups H ^ K of a group G let fy~H denote the set {g e K: gneH for some n ^ 1} 

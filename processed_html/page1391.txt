@@ -1,0 +1,1 @@
+[SOLVED] useradd command with -p option (cannot login to new account) 

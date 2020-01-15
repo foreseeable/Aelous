@@ -1,0 +1,1 @@
+When I open sites in Chrome IDM starts many unwanted downloads. How to stop this? When I try to download any video from Youtube IDM shows 403 Forbidden error. What should I do? 

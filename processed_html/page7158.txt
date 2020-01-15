@@ -1,0 +1,1 @@
+Administration / Ashley Adcox-Garner's Profile High Contrast Phone:  915-937-6600 Email: aadcox@sisd.net $(document).ready(function () {var encodedEmail = swrot13('nnqpbk@fvfq.arg');$('span#sw-emailmask-85675').replaceWith(' ' + encodedEmail + ' ');}); Degrees and Certifications: Assignments: 
