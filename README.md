@@ -32,23 +32,30 @@ categories.
 we are 95% confident. For example, the one with url that 
 starts with `wikipedia` or contains `imdb/title`, etc.
 
-Second we build the following pipeline to classify the webpage, 
-(Visualization here)
+Second we have built 3 independent models to classify the
+web page.
+### 2.1 url model
+In this sub model, we use unsupervised cluster algorithm 
+to do classification. However, the category can not be mapped
+to the clusters we have found, since the dataset
+is really biased. 
 
-    model1(based on url) --> model2(based on html & img) --> category
-
-We have built 2 sub-model to classify the webpage. 
-### 2.1 html model
+### 2.2 html model
 First we use html parser to parse the html into plain text, and 
 next we use doc2vec to transform the text data into a vector 
-of 300 dimension. It reaches an accuracy of 80% on the dataset.
+of 300 dimension. Then use a deep learning model 
+to predict the category. 
 
-Now we train a deep learning model to do classification. 
-### 2.2 image model 
+It finally reaches an accuracy of 80% on the dataset. However, the 
+model sometimes can not converge, we can see that there are
+still some problems in the model or the feature engineering. 
+
+
+### 2.3 image model 
 We use deep CNN to train the model, and it reaches an 
-accuracy of 85% on the dataset and 95% on the validation set.
-
-### 2.3 Put together
+accuracy of 81% on the dataset and 95% on the validation set.
+![.pipeline](./poster/img_model.png)
+### 2.4 Combined model 
 ![.pipeline](./poster/sum.png)
 In addition, we have put the 2 model together. That is, we use
 both the html and the render to train the model, and it turns
@@ -62,7 +69,7 @@ Just like switch omega.
 * The browser can collect information about which category the user
 visited most frequently to decide which AD to present.
 
-And we have write a small demo extension as followed. 
+
 
 ## References
 [1] S4L: Self-Supervised Semi-Supervised Learning (ICCV 2019)
