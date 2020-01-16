@@ -4,3 +4,5 @@ html/*
 scripts/
 saved_models/
 models/
+.idea
+workspace.xml
