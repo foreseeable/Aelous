@@ -14,7 +14,7 @@
 
 ``vectors``中保存的是已转换好的vectors，load方式可参照``load_vectors.ipynb``
 
-``doc2vec.ipynb``是doc2vec的全部代码
+``doc2vec_clean.ipynb``是doc2vec的全部代码
 
 ``html_parser_trimmed``是最初parse html的代码
 
