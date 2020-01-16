@@ -14,8 +14,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="455">
-                <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <first_editor relative-caret-position="1057">
+                <caret line="64" column="54" lean-forward="true" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
               </first_editor>
               <second_editor />
             </state>
@@ -55,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="32" />
     <option name="width" value="960" />
     <option name="height" value="1048" />
@@ -115,7 +115,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73129000" />
+    <option name="totallyTimeSpent" value="76269000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -143,8 +143,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29308325" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6576788" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5697538" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.64478314" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -272,8 +272,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="455">
-            <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <first_editor relative-caret-position="1057">
+            <caret line="64" column="54" lean-forward="true" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
           </first_editor>
           <second_editor />
         </state>
