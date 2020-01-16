@@ -37,6 +37,23 @@ Second we build the following pipeline to classify the webpage,
 
     model1(based on url) --> model2(based on html & img) --> category
 
+We have built 2 sub-model to classify the webpage. 
+### 2.1 html model
+First we use html parser to parse the html into plain text, and 
+next we use doc2vec to transform the text data into a vector 
+of 300 dimension. It reaches an accuracy of 80% on the dataset.
+
+Now we train a deep learning model to do classification. 
+### 2.2 image model 
+We use deep CNN to train the model, and it reaches an 
+accuracy of 85% on the dataset and 95% on the validation set.
+
+### 2.3 Put together
+![.pipeline](./poster/sum.png)
+In addition, we have put the 2 model together. That is, we use
+both the html and the render to train the model, and it turns
+out to perform well on the dataset.
+
 ## 3. Demo and Posters
 There are many possible applications of webpage classification, for example 
 * We can build an extension for Chrome which can beautify the UI with 

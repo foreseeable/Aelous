@@ -1,17 +1,40 @@
+"""
+Author: Yujie Lu
+
+pre-process.py: Used to pre-process the dataset (the original dataset is './data/dataset.csv')
+Here is the basic information of our dataset
+
+- Dataset name: webpage-classification
+- Data size: 10K pairs of {web page screenshot image, web page html source}.
+- 800 samples are manually labeled {is_entity, category}
+- 2590 samples are manually labeled {is_entity}
+
+Specifically, there are 2 useful functions:
+1. Rates2proba(): transform the raters' choices into probability of each category.
+The generated dataset is saved as '/data/dataset_v1.csv'.
+2. LabelByRule(): Use rule-based methods to label more data of the dataset by the
+key words in the url. The labeled dataset is saved in '/data/more_label.csv'
+3. RemoveNan(file): in order to do supervised learning, we have to remove
+the data that is not labeled.
+"""
+
 import pandas as pd
 import numpy as np
 import math
 
 
 def is_nan(x):
+    """Helper function to label the data"""
     return x is np.nan or x != x
 
 
 def CountHyphen(url):
+    """Helper function to label the data"""
     return url.count('-')
 
 
 def ResetProba(df, id):
+    """Helper function to label the data"""
     df['media_introduction'][id] = 0.0
     df['others'][id] = 0.0
     df['location'][id] = 0.0
@@ -24,16 +47,14 @@ def ResetProba(df, id):
     df['article'][id] = 0.0
 
 
-data = pd.read_csv('./data/dataset.csv')
-data.sum()
-category = data['categories']
-
-
 # X_train = data['url']
 # y_train = data['Categories']
 
 
-def find_category():
+def check_category():
+    data = pd.read_csv('./data/dataset.csv')
+    data.sum()
+    category = data['categories']
     allcate = set()
     for id in np.arange(len(category)):
         if not is_nan(category[id]):
@@ -45,7 +66,23 @@ def find_category():
     print(allcate)
 
 
-def label_engineering():
+def RemoveNan(file):
+    data_nan = pd.read_csv('../data/' + file + '.csv')
+    data_nan.info()
+    category = data_nan['NewCategory']
+    for id in np.arange(len(data_nan)):
+        if is_nan(category[id]):
+            data_nan = data_nan.drop(id, axis=0)
+            # print('remove id: ', id)
+    print('drop all lines with nan for ', file)
+    data_nan.to_csv('../data/' + file + '-FullLabel.csv')
+
+
+def Rates2proba():
+    data = pd.read_csv('./data/dataset.csv')
+    data.sum()
+    category = data['categories']
+
     cate = ['media_introduction', 'others', 'location', 'social_media_profile', 'encyclopedia', \
             'qa_forum', 'shopping_item', 'list', 'media_player', 'article', 'NewCategory']
     proba = pd.DataFrame(index=np.arange(len(data)), columns=cate)
@@ -74,7 +111,8 @@ def label_engineering():
     result.to_csv('./data/dataset_v1.csv', index=False)
 
 
-def LabelByRule(sum_label=0):
+def LabelByRule():
+    sum_label = 0
     data_v1 = pd.read_csv('./data/dataset_v1.csv')
     category = data_v1['categories']
     url = data_v1['url']
@@ -139,5 +177,3 @@ def LabelByRule(sum_label=0):
 
 if __name__ == '__main__':
     LabelByRule()
-
-# label_engineering()

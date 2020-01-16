@@ -1,3 +1,8 @@
+"""
+Author: Yujie Lu
+
+crop.py: Used to crop the image to square shape
+"""
 import pandas as pd
 import numpy as np
 
