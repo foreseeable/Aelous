@@ -69,3 +69,5 @@ And we have write a small demo extension as followed.
 
 [2] Mean teachers are better role models: Weight-averaged consistency 
 targets improve semi-supervised deep learning results (NIPS 2017)
+
+[3] Le, Quoc, and Tomas Mikolov. "Distributed representations of sentences and documents." International conference on machine learning. 2014.
