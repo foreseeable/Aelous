@@ -135,9 +135,20 @@ def LabelByRule(sum_label=0):
 
     data_v1.to_csv('./data/more_label.csv')
     print('Labeled data in total: ', sum_label)
+    
+def RemoveNan(file):
+    data_nan = pd.read_csv('./data/' + file + '.csv')
+    category = data_nan['categories']
+    for id in np.arange(len(data_nan)):
+        if not is_nan(category[id]):
+            data_nan.drop(id, axis=0)
+    print('drop all lines with nan for ', file)
+    data_nan.to_csv('./data/' + file + '-FullLabel.csv')
+    
 
 
 if __name__ == '__main__':
-    LabelByRule()
+    # LabelByRule()
+    RemoveNan('more_label')
 
 # label_engineering()
